@@ -34,6 +34,13 @@
         {
 
             // code here
+            int x = 0;
+
+            for (int i = 2; i < array.Length; i += 2)
+                if (array[x] < array[i])
+                    x = i;
+
+            array[x] = x;
 
             // end
 
