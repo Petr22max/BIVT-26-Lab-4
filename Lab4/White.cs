@@ -7,6 +7,10 @@
             double length = 0;
 
             // code here
+            for (int i = 0; i < vector.Length; i++)
+                length += vector[i] * vector[i];
+
+            length = Math.Sqrt(length);
 
             // end
 
@@ -17,6 +21,9 @@
             int count = 0;
 
             // code here
+            for (int i = 0; i < array.Length; i++)
+                if (P < array[i] && Q > array[i])
+                    count++;
 
             // end
 
@@ -26,6 +33,22 @@
         {
 
             // code here
+            int x = 0;
+
+            for (int i = 1; i < array.Length; i++)
+                if (array[x] < array[i])
+                    x = i;
+
+            if (x == array.Length - 1)
+                return;
+
+            int n = x + 1;
+
+            for (int i = n + 1; i < array.Length; i++)
+                if (array[n] > array[i])
+                    n = i;
+
+            (array[x], array[n]) = (array[n], array[x]);
 
             // end
 
